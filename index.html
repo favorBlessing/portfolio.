@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercy Mwangi | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #1482db 0%, #9d50bb 100%);
+        }
+        
+        .skill-bar {
+            height: 10px;
+            border-radius: 5px;
+            background-color: #e0e0e0;
+        }
+        
+        .skill-progress {
+            height: 100%;
+            border-radius: 5px;
+            background: linear-gradient(90deg, #6e48aa, #9d50bb);
+            transition: width 1s ease-in-out;
+        }
+        
+        .portfolio-item {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: #9d50bb;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .active::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="w-1000 h-12">
+                <img src="images/logo.png" alt="Your Logo" class="w-full h-full object-contain">
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="nav-link active text-gray-800 hover:text-purple-600">Home</a>
+                <a href="#about" class="nav-link text-gray-800 hover:text-purple-600">About</a>
+                <a href="#skills" class="nav-link text-gray-800 hover:text-purple-600">Skills</a>
+                <a href="#portfolio" class="nav-link text-gray-800 hover:text-purple-600">Portfolio</a>
+                <a href="#contact" class="nav-link text-gray-800 hover:text-purple-600">Contact</a>
+            </div>
+            <button class="md:hidden focus:outline-none">
+                <i class="fas fa-bars text-2xl text-purple-800"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="pt-32 pb-20 px-6 gradient-bg text-white">
+        <div class="container mx-auto flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Hello, I'm <span class="text-yellow-300">Mercy Mwangi</span></h1>
+                <h2 class="text-2xl md:text-3xl mb-6">Business Information Technology Professional & Creative Designer</h2>
+                <p class="text-lg mb-8">Bachelor of Business Information Technology graduate from St. Paul University with expertise in graphic design, videography, and virtual assistance.</p>
+                <div class="flex space-x-4">
+                    <a href="#contact" class="px-6 py-3 bg-white text-purple-800 font-semibold rounded-full hover:bg-gray-100 transition duration-300">Hire Me</a>
+                    <a href="#portfolio" class="px-6 py-3 border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-purple-800 transition duration-300">View Work</a>
+                </div>
+            </div>
+            <div class="md:w-1/2 flex justify-center">
+                <div class="relative w-50 h-64 md:w-50 md:h-80 rounded-full overflow-hidden border-4 border-sky bg-purple-50 shadow-xl">
+                    <!-- Placeholder for your photo -->
+                    <div class="w-full h-full bg-gray-100 flex items-center justify-center">
+                        <img src="images/5.jpeg" alt="Description of your image" class="w-auto h-auto max-w-full max-h-full object-contain">
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16 text-purple-800">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/3 mb-10 md:mb-0 flex justify-center">
+                    <div class="w-64 h-64 rounded-full overflow-hidden shadow-lg">
+                        <!-- Another photo placeholder -->
+                        <div class="w-full h-full bg-gray-100 flex items-center justify-center">
+                            <img src="images/image 3.jpeg" alt="Description of your image" class="w-auto h-auto max-w-full max-h-full object-contain">
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-2/3 md:pl-12">
+                    <h3 class="text-2xl font-semibold mb-4 text-gray-800">Who am I?</h3>
+                    <p class="text-gray-600 mb-6">I am Mercy Mwangi, a passionate Business Information Technology professional with a creative edge. My journey in technology and design has equipped me with a unique blend of technical expertise and artistic vision.</p>
+                    
+                    <div class="mb-8">
+                        <h4 class="text-xl font-semibold mb-4 text-purple-700">Education</h4>
+                        <div class="space-y-4">
+                            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                                <h5 class="font-medium">Bachelor of Business Information Technology</h5>
+                                <p class="text-gray-500">St. Paul University</p>
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                                <h5 class="font-medium">ALX Certification</h5>
+                                <p class="text-gray-500">AICE (Artificial Intelligence)</p>
+                                <a href=" https://intranet.alxswe.com/certificates/6BxJ5HzRPy" target="_blank" rel="noopener noreferrer"
+                            class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 hover:bg-purple-600 hover:text-white transition">
+                             <i class="fab fa-certificate text-xl"></i>
+                         </a>
+   
+                               
+                            </div>
+                            <div class="bg-gray-50 p-4 rounded-lg shadow-sm">
+                                <h5 class="font-medium">Virtual Assistant Certification</h5>
+                                <p class="text-gray-500">Professional Virtual Assistance Training</p>
+                                <a href="https://intranet.alxswe.com/certificates/pRY2Tfs8SP" target="_blank" rel="noopener noreferrer"
+                            class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 hover:bg-purple-600 hover:text-white transition">
+                             <i class="fab fa-certificate text-xl"></i>
+                         </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="flex flex-wrap gap-4">
+                        <div class="flex items-center bg-purple-100 px-4 py-2 rounded-full">
+                            <i class="fas fa-laptop-code text-purple-700 mr-2"></i>
+                            <span class="text-purple-800">IT Professional</span>
+                        </div>
+                        <div class="flex items-center bg-purple-100 px-4 py-2 rounded-full">
+                            <i class="fas fa-paint-brush text-purple-700 mr-2"></i>
+                            <span class="text-purple-800">Graphic Designer</span>
+                        </div>
+                        <div class="flex items-center bg-purple-100 px-4 py-2 rounded-full">
+                            <i class="fas fa-video text-purple-700 mr-2"></i>
+                            <span class="text-purple-800">Videographer</span>
+                        </div>
+                        <div class="flex items-center bg-purple-100 px-4 py-2 rounded-full">
+                            <i class="fas fa-headset text-purple-700 mr-2"></i>
+                            <span class="text-purple-800">Virtual Assistant</span>
+                        </div>
+                        <div class="flex items-center bg-purple-100 px-4 py-2 rounded-full">
+                            <i class="fas fa-headset text-purple-700 mr-2"></i>
+                            <span class="text-purple-800">Artificial Intelligence</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16 text-purple-800">My Skills</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Technical Skills -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800 flex items-center">
+                        <i class="fas fa-code text-purple-600 mr-3"></i> Technical Skills
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Business Information Systems</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Website Development</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Database Management</span>
+                                <span>70%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">IT Project Management</span>
+                                <span>75%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Creative Skills -->
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800 flex items-center">
+                        <i class="fas fa-palette text-purple-600 mr-3"></i> Creative Skills
+                    </h3>
+                    <div class="space-y-6">
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Logo & Brand Design</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Videography & Editing</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Graphic Design</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between mb-2">
+                                <span class="font-medium">Digital Marketing</span>
+                                <span>80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Tools Section -->
+            <div class="mt-12 bg-white p-8 rounded-xl shadow-md">
+                <h3 class="text-2xl font-semibold mb-6 text-gray-800 flex items-center">
+                    <i class="fas fa-tools text-purple-600 mr-3"></i> Tools & Technologies
+                </h3>
+                <div class="flex flex-wrap gap-6 justify-center">
+                    
+                    <div class="flex flex-col items-center p-4 hover:bg-purple-50 rounded-lg transition">
+                        <i class="fas fa-film text-4xl text-purple-600 mb-2"></i>
+                        <span>Cap Cut</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 hover:bg-purple-50 rounded-lg transition">
+                        <i class="fab fa-home text-4xl text-purple-600 mb-2"></i>
+                        <span>Canva</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 hover:bg-purple-50 rounded-lg transition">
+                        <i class="fas fa-database text-4xl text-purple-600 mb-2"></i>
+                        <span>SQL</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 hover:bg-purple-50 rounded-lg transition">
+                        <i class="fab fa-microsoft text-4xl text-purple-600 mb-2"></i>
+                        <span>Office 365</span>
+                    </div>
+                    <div class="flex flex-col items-center p-4 hover:bg-purple-50 rounded-lg transition">
+                        <i class="fas fa-cloud text-4xl text-purple-600 mb-2"></i>
+                        <span>Cloud Platforms</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-6 bg-white">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16 text-purple-800">My Portfolio</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12">
+                <button class="px-4 py-2 bg-purple-600 text-white rounded-full hover:bg-purple-700 transition filter-btn active" data-filter="all">All</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-purple-600 hover:text-white transition filter-btn" data-filter="graphic">Graphic Design</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-purple-600 hover:text-white transition filter-btn" data-filter="video">Videography</button>
+                <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-full hover:bg-purple-600 hover:text-white transition filter-btn" data-filter="it">IT Projects</button>
+            </div>
+            
+            <!-- Portfolio Items -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Graphic Design Items -->
+                <div class="portfolio-item rounded-xl overflow-hidden shadow-md" data-category="graphic">
+                    <div class="h-64 bg-gray-200 relative group">
+                        <!-- Placeholder for graphic design work -->
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-palette text-6xl text-gray-500"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <img src="/images/l1.jpeg" alt="Description of the image" class="max-w-full h-auto max-h-48 object-contain p-4">
+                           <!-- <a href="#" class="px-6 py-3 bg-white text-purple-800 font-semibold rounded-full hover:bg-gray-100 transition">View Project</a>-->
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">logo Design</h3>
+                        <p class="text-gray-600">Logo and complete brand identity package for a tech startup.</p>
+                        <p class="text-gray-600">the above is an example</p>
+                    </div>
+                </div>
+                
+                <!-- Videography Items 
+                <div class="portfolio-item rounded-xl overflow-hidden shadow-md" data-category="video">
+                    <div class="h-64 bg-gray-200 relative group">
+                        
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-video text-6xl text-gray-500"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <a href="#" class="px-6 py-3 bg-white text-purple-800 font-semibold rounded-full hover:bg-gray-100 transition">View Project</a>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Corporate Video</h3>
+                        <p class="text-gray-600">Promotional video for a financial services company.</p>
+                    </div>
+                </div> -->
+                
+                <!-- IT Project Items -->
+                <div class="portfolio-item rounded-xl overflow-hidden shadow-md" data-category="it">
+                    <div class="h-64 bg-gray-200 relative group">
+                        <!-- Placeholder for IT project -->
+                        <div class="w-full h-full flex items-center justify-center">
+                            <i class="fas fa-laptop-code text-6xl text-gray-500"></i>
+                        </div>
+                        <div class="absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                            <img src="/images/w.png" alt="Description of the image" class="max-w-full h-auto max-h-48 object-contain p-4">
+                            <!-- <a href="#" class="px-6 py-3 bg-white text-purple-800 font-semibold rounded-full hover:bg-gray-100 transition">View Project</a> -->
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2">Website Development</h3>
+                        <p class="text-gray-600">turning dreams to reality</p>
+                        <p class="text-gray-600">the above is a beauty Management System</p>
+                    </div>
+                </div>
+                
+                <!-- More items can be added here following the same pattern -->
+            </div>
+            
+           <!-- <div class="text-center mt-12">
+                <a href="#" class="px-6 py-3 bg-purple-600 text-white font-semibold rounded-full hover:bg-purple-700 transition inline-flex items-center">
+                    View More Projects
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+            </div>
+        </div> -->
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-6 bg-gray-50">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-16 text-purple-800">Get In Touch</h2>
+            
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Contact Information</h3>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-envelope text-purple-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Email</h4>
+                                <p class="text-gray-600">mercymwangifavor@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-phone-alt text-purple-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Phone</h4>
+                                <p class="text-gray-600">+254 705 540 787</p>
+                            </div>
+                        </div>
+                        
+                        <div class="flex items-start">
+                            <div class="bg-purple-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-map-marker-alt text-purple-700"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-medium text-gray-800">Location</h4>
+                                <p class="text-gray-600">Nairobi, Kenya</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-10">
+                        <h4 class="text-xl font-semibold mb-4 text-gray-800">Connect With Me</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://www.linkedin.com/in/mercy-mwangi-9646aa309/" target="_blank" rel="noopener noreferrer"
+                            class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 hover:bg-purple-600 hover:text-white transition">
+                             <i class="fab fa-linkedin-in text-xl"></i>
+                         </a>
+                         <a href="https://www.instagram.com/favorblessing993?igsh=MTgwbHg5bG1tdWoyNw==" target="_blank" rel="noopener noreferrer"
+                         class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 hover:bg-purple-600 hover:text-white transition">
+                          <i class="fab fa-instagram text-xl"></i>
+                      </a>
+                      <a href="https://www.facebook.com/share/1AbWcJim69/" target="_blank" rel="noopener noreferrer"
+                      class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 hover:bg-purple-600 hover:text-white transition">
+                       <i class="fab fa-facebook text-xl"></i>
+                   </a>
+                           
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="lg:w-1/2">
+                    <h3 class="text-2xl font-semibold mb-6 text-gray-800">Send Me a Message</h3>
+                    <form class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 mb-2">Your Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Enter your name">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 mb-2">Your Email</label>
+                                <input type="email" id="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Enter your email">
+                            </div>
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-gray-700 mb-2">Subject</label>
+                            <input type="text" id="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="What's this about?">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-gray-700 mb-2">Message</label>
+                            <textarea id="message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent" placeholder="Your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="px-6 py-3 bg-purple-600 text-white font-semibold rounded-lg hover:bg-purple-700 transition w-full md:w-auto">
+                            Send Message
+                            <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-purple-900 text-white py-8 px-6">
+        <div class="container mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h3 class="text-2xl font-bold">Mercy Mwangi</h3>
+                    <p class="text-purple-200">Business IT Professional & Creative Designer</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://www.linkedin.com/in/mercy-mwangi-9646aa309/" target="_blank" rel="noopener noreferrer"
+                            class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 hover:bg-purple-600 hover:text-white transition">
+                             <i class="fab fa-linkedin-in text-xl"></i>
+                         </a>
+                         <a href="https://www.instagram.com/favorblessing993?igsh=MTgwbHg5bG1tdWoyNw==" target="_blank" rel="noopener noreferrer"
+                         class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 hover:bg-purple-600 hover:text-white transition">
+                          <i class="fab fa-instagram text-xl"></i>
+                      </a>
+                      <a href="https://www.facebook.com/share/1AbWcJim69/" target="_blank" rel="noopener noreferrer"
+                      class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-700 hover:bg-purple-600 hover:text-white transition">
+                       <i class="fab fa-facebook text-xl"></i>
+                   </a>
+                    
+                </div>
+            </div>
+            <div class="border-t border-purple-800 mt-8 pt-8 text-center text-purple-300">
+                <p>&copy; 2025 Mercy Mwangi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-8 right-8 w-12 h-12 bg-purple-600 text-white rounded-full shadow-lg flex items-center justify-center opacity-0 invisible transition-all duration-300">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.remove('opacity-0', 'invisible');
+                backToTopButton.classList.add('opacity-100', 'visible');
+            } else {
+                backToTopButton.classList.remove('opacity-100', 'visible');
+                backToTopButton.classList.add('opacity-0', 'invisible');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+        
+        // Portfolio Filter
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                filterButtons.forEach(btn => btn.classList.remove('active', 'bg-purple-600', 'text-white'));
+                filterButtons.forEach(btn => btn.classList.add('bg-gray-200', 'text-gray-700'));
+                
+                // Add active class to clicked button
+                button.classList.add('active', 'bg-purple-600', 'text-white');
+                button.classList.remove('bg-gray-200', 'text-gray-700');
+                
+                const filterValue = button.getAttribute('data-filter');
+                
+                portfolioItems.forEach(item => {
+                    if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+        
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                // Update active nav link
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active');
+                });
+                this.classList.add('active');
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Update active nav link on scroll
+        window.addEventListener('scroll', () => {
+            const scrollPosition = window.scrollY;
+            
+            document.querySelectorAll('section').forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+                
+                if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                        if (link.getAttribute('href') === `#${sectionId}`) {
+                            link.classList.add('active');
+                        }
+                    });
+                }
+            });
+        });
+        
+        // Mobile menu toggle (placeholder - would need actual implementation)
+        document.querySelector('.md\\:hidden').addEventListener('click', () => {
+            alert('Mobile menu would open here in a complete implementation');
+        });
+    </script>
+</body>
+</html>
